@@ -14,7 +14,7 @@
             margin: auto;
             background-color: white;
             width: 500px;
-            height: 500px;
+            height: 550px;
             text-align: center;
             padding-top: 20px;
         }
@@ -22,22 +22,23 @@
             font-family: "Loved by the King", serif;
         }
         #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 15px;
+            color: white;
+            margin-left: -80px;
+        }
+        #nao{
             position: absolute;
             height: 40px;
             width: 60px;
             background-color: red;
-            border: white;
+            border: 2px solid white;
             border-radius: 15px;
             color: white;
-        }
-        #nao{
-            height: 40px;
-            width: 60px;
-            background-color: red;
-            border: white;
-            border-radius: 15px;
-            color: white;
-            margin-left: 70px;
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -45,10 +46,22 @@
     <div class="painel">
         <h1>Aceita me dar um beijo?</h1>
         <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="urso coracao">
+
+        <h2>&#x1F49E &#x1F49E &#x1F49E</h2>
     
-        <button id="sim">Sim!</button>
-        <button onmouseover="fuja" id="nao">Não!</button>
+        <button id="sim" onclick="parabens()">Sim!</button>
+        <button id="nao" onclick="pessimo()">Não!</button>
         
     </div>
+
+    <script>
+        function pessimo(){
+            alert("Péssima escolha! Escolha novamente!")
+        }
+
+        function parabens(){
+            alert("Parabéns! Você fez uma ótima escolha!")
+        }
+    </script>
 </body>
 </html>
